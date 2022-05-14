@@ -8,14 +8,11 @@ using System.Threading.Tasks;
 
 namespace PageOblectSolution1.PaegObjects
 {
-    class ElementsPageObject : BasePageObject
+    class ElementsPageObject
     {
         protected IWebDriver _webDriver;
         private readonly By _textBoxLocator = By.XPath("//*[@id='item - 0']/span");
-        public ElementsPageObject(IWebDriver webDriver) : base(webDriver)
-        {
-
-        }
+        
         public void NavigateToTextBox()
         {
             _webDriver.FindElement(_textBoxLocator).Click();

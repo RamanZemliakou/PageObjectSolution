@@ -21,7 +21,6 @@ namespace PageOblectSolution1
         public void NavigateToElements()
         {
             _webDriver.Navigate().GoToUrl(url);
-            Thread.Sleep(10000);
             _webDriver.FindElement(_elementsLocator).Click();
         }
     }

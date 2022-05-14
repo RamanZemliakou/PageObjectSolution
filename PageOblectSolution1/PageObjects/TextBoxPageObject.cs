@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace PageOblectSolution1.PaegObjects
 {
-    internal class TextBoxPageObject : ElementsPageObject
+    internal class TextBoxPageObject
     {
+        protected IWebDriver _webDriver;
+
         private readonly By _fullNameLocator = By.XPath("//*[@id='userName']");
         private readonly By _eMailLocator = By.XPath("//*[@id='userEmail']");
         private readonly By _currentAdressLocator = By.XPath("//*[@id='currentAddress']");
@@ -22,9 +24,7 @@ namespace PageOblectSolution1.PaegObjects
         private readonly string currentAddress = "Belarus, Minsk";
         private readonly string permanetAddress = "some other address";
 
-        public TextBoxPageObject(IWebDriver webDriver) : base(webDriver)
-        {
-        }
+        
         public void InsertInputData()
         {
             _webDriver.FindElement(_fullNameLocator).SendKeys(userName);
