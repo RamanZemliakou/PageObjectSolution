@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageOblectSolution1", "PageOblectSolution1\PageOblectSolution1.csproj", "{026AEE26-4B82-4F5E-A569-F17C382DD8A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{026AEE26-4B82-4F5E-A569-F17C382DD8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{026AEE26-4B82-4F5E-A569-F17C382DD8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{026AEE26-4B82-4F5E-A569-F17C382DD8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{026AEE26-4B82-4F5E-A569-F17C382DD8A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEEA9D9B-FC05-4365-9C0D-897E907BE4A7}
+	EndGlobalSection
+EndGlobal
