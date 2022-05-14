@@ -24,7 +24,10 @@ namespace PageOblectSolution1.PaegObjects
         private readonly string currentAddress = "Belarus, Minsk";
         private readonly string permanetAddress = "some other address";
 
-        
+        public TextBoxPageObject(IWebDriver webDriver)
+        {
+        }
+
         public void InsertInputData()
         {
             _webDriver.FindElement(_fullNameLocator).SendKeys(userName);

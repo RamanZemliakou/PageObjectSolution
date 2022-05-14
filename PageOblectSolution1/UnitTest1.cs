@@ -13,7 +13,6 @@ namespace PageOblectSolution1
         public void Setup()
         {
             _webDriver = new ChromeDriver();
-            _webDriver.Manage().Window.Maximize();
             _webDriver.Navigate().GoToUrl("https://demoqa.com/text-box");
         }
 
