@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace PageOblectSolution1.PaegObjects
 {
-    internal class TextBoxPageObject
+    internal class TextBoxPageObject : ElementsPageObject
+
     {
         protected IWebDriver _webDriver;
 
@@ -24,9 +25,10 @@ namespace PageOblectSolution1.PaegObjects
         private readonly string currentAddress = "Belarus, Minsk";
         private readonly string permanetAddress = "some other address";
 
-        public TextBoxPageObject(IWebDriver webDriver)
+        public TextBoxPageObject(IWebDriver webDriver) : base(webDriver)
         {
         }
+        
 
         public void InsertInputData()
         {

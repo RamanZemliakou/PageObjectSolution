@@ -13,7 +13,7 @@ namespace PageOblectSolution1
         protected IWebDriver _webDriver;
 
         private string url = "https://demoqa.com";
-        private readonly By _elementsLocator = By.XPath("//*[@id='app']");
+        private readonly By _elementsLocator = By.XPath("//h5[text()='Elements']");
         public BasePageObject(IWebDriver webDriver)
         {
             _webDriver = webDriver;

@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
+using System.Threading;
 using PageOblectSolution1.PaegObjects;
 
 namespace PageOblectSolution1
@@ -13,13 +14,14 @@ namespace PageOblectSolution1
         public void Setup()
         {
             _webDriver = new ChromeDriver();
-            _webDriver.Navigate().GoToUrl("https://demoqa.com/text-box");
         }
 
         [Test]
         public void OutputFieldTest()
         {
             var textBoxPage = new TextBoxPageObject(_webDriver);
+            textBoxPage.NavigateToElements();
+            textBoxPage.NavigateToTextBox();
             textBoxPage.InsertInputData();
             string userName = textBoxPage.ReadData();
                 
@@ -29,7 +31,7 @@ namespace PageOblectSolution1
         [TearDown]
         public void TearDown()
         {
-            _webDriver.Quit();
+            //_webDriver.Quit();
         }
     }
 }
