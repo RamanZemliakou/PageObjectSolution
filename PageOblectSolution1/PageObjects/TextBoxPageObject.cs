@@ -19,7 +19,6 @@ namespace PageOblectSolution1.PaegObjects
         private readonly By _outputNameLocator = By.XPath("//*[@id='name']");
 
         private readonly string userName = "New User";
-        //public string userName = "New User";
         private readonly string userEmail = "mail@mail.com";
         private readonly string currentAddress = "Belarus, Minsk";
         private readonly string permanetAddress = "some other address";

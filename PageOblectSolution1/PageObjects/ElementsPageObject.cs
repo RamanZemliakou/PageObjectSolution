@@ -10,8 +10,9 @@ namespace PageOblectSolution1.PaegObjects
 {
     class ElementsPageObject : BasePageObject
     {
-        //private string url = "https://demoqa.com/elements";
         private readonly By _textBoxLocator = By.XPath("//span[text()='Text Box']");
+        private readonly By _checkBoxLocator = By.XPath("//span[text()='Check Box']");
+        private readonly By _radioButtonLocator = By.XPath("//span[text()='Radio Button']");
 
         public ElementsPageObject(IWebDriver webDriver) : base(webDriver)
         {
@@ -19,8 +20,15 @@ namespace PageOblectSolution1.PaegObjects
 
         public void NavigateToTextBox()
         {
-            //_webDriver.Navigate().GoToUrl(url);
             _webDriver.FindElement(_textBoxLocator).Click();
+        }
+        public void NavigateToCheckBox()
+        {
+            _webDriver.FindElement(_checkBoxLocator).Click();
+        }
+        public void NavigateToRadioButton()
+        {
+            _webDriver.FindElement(_radioButtonLocator).Click();
         }
     }
 }
