@@ -10,7 +10,7 @@ using PageOblectSolution1.PageObjects;
 
 namespace PageOblectSolution1
 {
-    internal class UnitTest2
+    internal class CheckBoxTest
     {
         IWebDriver _webDriver;
 
@@ -20,12 +20,12 @@ namespace PageOblectSolution1
             _webDriver = new DriverProvider().GetDriver();
         }
         [Test]
-        public void CheckBoxTest()
+        public void CheckBoxSelectionTest()
         {
             var checkBoxPage = new CheckBoxPageObject(_webDriver);
             checkBoxPage.NavigateToElements();
             checkBoxPage.NavigateToCheckBox();
-            checkBoxPage.ExpandListOfCheckboxes();
+            checkBoxPage.ExpandListOfCheckboxesFirstLayer();
             //checkBoxPage.SelectOneCheckBox();
         }
         [TearDown]
