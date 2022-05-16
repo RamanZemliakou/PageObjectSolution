@@ -10,8 +10,6 @@ namespace PageOblectSolution1.PaegObjects
     internal class TextBoxPageObject : ElementsPageObject
 
     {
-        protected IWebDriver _webDriver;
-
         private readonly By _fullNameLocator = By.XPath("//*[@id='userName']");
         private readonly By _eMailLocator = By.XPath("//*[@id='userEmail']");
         private readonly By _currentAdressLocator = By.XPath("//*[@id='currentAddress']");
@@ -21,6 +19,7 @@ namespace PageOblectSolution1.PaegObjects
         private readonly By _outputNameLocator = By.XPath("//*[@id='name']");
 
         private readonly string userName = "New User";
+        //public string userName = "New User";
         private readonly string userEmail = "mail@mail.com";
         private readonly string currentAddress = "Belarus, Minsk";
         private readonly string permanetAddress = "some other address";
@@ -45,6 +44,12 @@ namespace PageOblectSolution1.PaegObjects
             string outputName = _webDriver.FindElement(_outputNameLocator).Text;
 
             return outputName;
+        }
+
+        public string UserNameToCompare()
+        {
+            string userNameToCompare = userName;
+            return userNameToCompare;
         }
     }
 }

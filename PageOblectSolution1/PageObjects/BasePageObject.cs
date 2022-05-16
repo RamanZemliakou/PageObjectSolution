@@ -12,8 +12,8 @@ namespace PageOblectSolution1
     {
         protected IWebDriver _webDriver;
 
-        private string url = "https://demoqa.com";
-        private readonly By _elementsLocator = By.XPath("//h5[text()='Elements']");
+        public static readonly string url = "https://demoqa.com";
+        private readonly By _elementsGroupLocator = By.XPath("//h5[text()='Elements']");
         public BasePageObject(IWebDriver webDriver)
         {
             _webDriver = webDriver;
@@ -21,7 +21,7 @@ namespace PageOblectSolution1
         public void NavigateToElements()
         {
             _webDriver.Navigate().GoToUrl(url);
-            _webDriver.FindElement(_elementsLocator).Click();
+            _webDriver.FindElement(_elementsGroupLocator).Click();
         }
     }
 }

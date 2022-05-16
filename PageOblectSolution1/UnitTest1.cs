@@ -13,25 +13,25 @@ namespace PageOblectSolution1
         [SetUp]
         public void Setup()
         {
-            _webDriver = new ChromeDriver();
+            _webDriver = new DriverProvider().GetDriver();
         }
 
         [Test]
         public void OutputFieldTest()
         {
-            var textBoxPage = new TextBoxPageObject(_webDriver);
+            var textBoxPage = new TextBoxPageObject(_webDriver); //call method GetWebdriver
             textBoxPage.NavigateToElements();
             textBoxPage.NavigateToTextBox();
             textBoxPage.InsertInputData();
-            string userName = textBoxPage.ReadData();
-                
-            var inputName = userName;
-            Assert.AreEqual("Name:" + userName, inputName);
+            string userNameResult = textBoxPage.ReadData();
+
+            var inputName = textBoxPage.UserNameToCompare();
+            Assert.AreEqual("Name:" + inputName, userNameResult);
         }
         [TearDown]
         public void TearDown()
         {
-            //_webDriver.Quit();
+            _webDriver.Quit();
         }
     }
 }

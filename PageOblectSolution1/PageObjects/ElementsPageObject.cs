@@ -10,7 +10,7 @@ namespace PageOblectSolution1.PaegObjects
 {
     class ElementsPageObject : BasePageObject
     {
-        protected IWebDriver _webDriver;
+        //private string url = "https://demoqa.com/elements";
         private readonly By _textBoxLocator = By.XPath("//span[text()='Text Box']");
 
         public ElementsPageObject(IWebDriver webDriver) : base(webDriver)
@@ -19,6 +19,7 @@ namespace PageOblectSolution1.PaegObjects
 
         public void NavigateToTextBox()
         {
+            //_webDriver.Navigate().GoToUrl(url);
             _webDriver.FindElement(_textBoxLocator).Click();
         }
     }
