@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 using System.Threading;
 using PageOblectSolution1.PaegObjects;
 
-namespace PageOblectSolution1
+namespace PageOblectSolution1.Tests
 {
     public class Tests
     {
@@ -33,7 +33,7 @@ namespace PageOblectSolution1
         [TearDown]
         public void TearDown()
         {
-            _pageProvider.Quit();
+            //_pageProvider.Quit();
         }
     }
 }

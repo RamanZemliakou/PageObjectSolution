@@ -17,11 +17,13 @@ namespace PageOblectSolution1.PaegObjects
         private readonly By _submitButtonLocator = By.XPath("//*[@id='submit']");
         private readonly By _outputFieldLocator = By.XPath("//*[@id='output']");
         private readonly By _outputNameLocator = By.XPath("//*[@id='name']");
+        private readonly By _invalidEmailValidation = By.XPath("//*[@class='mr-sm-2 field-error form-control']");
 
         private readonly string userName = "New User";
         private readonly string userEmail = "mail@mail.com";
         private readonly string currentAddress = "Belarus, Minsk";
         private readonly string permanetAddress = "some other address";
+        private readonly string invalidEmail = "qwqwqw";
 
         public TextBoxPageObject(IWebDriver webDriver) : base(webDriver)
         {
@@ -43,6 +45,12 @@ namespace PageOblectSolution1.PaegObjects
             string outputName = _webDriver.FindElement(_outputNameLocator).Text;
 
             return outputName;
+        }
+
+        public void EnterInvalidEmail()
+        {
+            _webDriver.FindElement(_eMailLocator).SendKeys(invalidEmail);
+            _webDriver.FindElement(_submitButtonLocator).Click();
         }
 
         public string UserNameToCompare()
