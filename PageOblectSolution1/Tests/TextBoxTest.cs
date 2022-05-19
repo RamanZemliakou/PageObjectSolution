@@ -8,18 +8,20 @@ namespace PageOblectSolution1
 {
     public class Tests
     {
-        IWebDriver _webDriver;
-
+        //DriverProvider _driverProvider;
+        PageProvider _pageProvider;
+        
         [SetUp]
         public void Setup()
         {
-            _webDriver = new DriverProvider().GetDriver();
+            //_driverProvider = new DriverProvider();
+            _pageProvider = new PageProvider();
         }
 
         [Test]
         public void OutputFieldTest()
         {
-            var textBoxPage = new TextBoxPageObject(_webDriver); //call method GetWebdriver
+            var textBoxPage = new TextBoxPageObject(_pageProvider.SetDriver()); //call method GetWebdriver
             textBoxPage.NavigateToElements();
             textBoxPage.NavigateToTextBox();
             textBoxPage.InsertInputData();
@@ -31,7 +33,7 @@ namespace PageOblectSolution1
         [TearDown]
         public void TearDown()
         {
-            _webDriver.Quit();
+            _pageProvider.Quit();
         }
     }
 }

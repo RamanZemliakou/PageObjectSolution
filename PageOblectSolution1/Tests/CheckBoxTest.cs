@@ -12,17 +12,17 @@ namespace PageOblectSolution1
 {
     internal class CheckBoxTest
     {
-        IWebDriver _webDriver;
+        DriverProvider _driverProvider;
 
         [SetUp]
         public void Setup()
         {
-            _webDriver = new DriverProvider().GetDriver();
+            _driverProvider = new DriverProvider();
         }
         [Test]
         public void CheckBoxSelectionTest()
         {
-            var checkBoxPage = new CheckBoxPageObject(_webDriver);
+            var checkBoxPage = new CheckBoxPageObject(_driverProvider.GetDriver());
             checkBoxPage.NavigateToElements();
             checkBoxPage.NavigateToCheckBox();
             checkBoxPage.ExpandListOfCheckboxesFirstLayer();
@@ -31,7 +31,7 @@ namespace PageOblectSolution1
         [TearDown]
         public void TearDown()
         {
-            //_webDriver.Quit();
+            _driverProvider.Quit();
         }
     }
 }

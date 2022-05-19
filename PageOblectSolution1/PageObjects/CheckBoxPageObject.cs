@@ -15,7 +15,7 @@ namespace PageOblectSolution1.PageObjects
         public CheckBoxPageObject(IWebDriver webDriver) : base(webDriver)
         {
         }
-        public void ExpandListOfCheckboxes()
+        public void ExpandListOfCheckboxesFirstLayer()
         {
             _webDriver.FindElement(_expandListOfCheckBoxes).Click();
         }
