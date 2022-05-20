@@ -53,6 +53,11 @@ namespace PageOblectSolution1.PaegObjects
             _webDriver.FindElement(_submitButtonLocator).Click();
         }
 
+        public void InvalidEmailValidation()
+        {
+            _webDriver.FindElement(_invalidEmailValidation);
+        }
+
         public string UserNameToCompare()
         {
             string userNameToCompare = userName;

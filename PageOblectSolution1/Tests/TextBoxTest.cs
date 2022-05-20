@@ -19,6 +19,7 @@ namespace PageOblectSolution1.Tests
         }
 
         [Test]
+        [Parallelizable]
         public void OutputFieldTest()
         {
             var textBoxPage = new TextBoxPageObject(_pageProvider.SetDriver()); //call method GetWebdriver

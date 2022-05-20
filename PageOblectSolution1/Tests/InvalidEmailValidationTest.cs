@@ -18,13 +18,20 @@ namespace PageOblectSolution1.Tests
             _pageProvider = new PageProvider();
         }
         [Test]
+        [Parallelizable]
         public void InvalidEmailTest()
         {
             var textBoxPage = new TextBoxPageObject(_pageProvider.SetDriver());
             textBoxPage.NavigateToElements();
             textBoxPage.NavigateToTextBox();
             textBoxPage.EnterInvalidEmail();
-
+            textBoxPage.InvalidEmailValidation();
+            //Assert.That(_pageProvider.Equals(textBoxPage.InvalidEmailValidation), Is.EqualTo(true));
+        }
+        [TearDown]
+        public void Teardown()
+        {
+            //_pageProvider.Quit();
         }
     }
 }
