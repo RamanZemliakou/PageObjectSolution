@@ -20,7 +20,9 @@ namespace PageOblectSolution1
             {
                 ChromeOptions options = new ChromeOptions();
                 
-                _storedDriver.Value = new ChromeDriver(@"D:\CSharpLearn\PageObjectSolution\PageOblectSolution1\bin\Debug\net6.0", options)
+                //_storedDriver.Value = new ChromeDriver(@"D:\CSharpLearn\PageObjectSolution\PageOblectSolution1\bin\Debug\net6.0", options)
+                //_storedDriver.Value = new ChromeDriver(@"C:\Users\User-PC\source\repos\PageObjectSolution\PageOblectSolution1\bin\Debug\net6.0", options)
+                _storedDriver.Value = new ChromeDriver(options)
                 {
                     Url = BasePageObject.url
                 };
@@ -31,6 +33,10 @@ namespace PageOblectSolution1
         public void Quit()
         {
             _storedDriver.Value.Quit();
+        }
+        public void Close()
+        {
+            _storedDriver.Value.Close();
         }
     }
 }

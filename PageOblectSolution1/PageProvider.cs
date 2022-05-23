@@ -16,6 +16,10 @@ namespace PageOblectSolution1
         {
             driverProvider.Quit();
         }
+        public void Close()
+        {
+            driverProvider.Close();
+        }
 
         public IWebDriver SetDriver()
         {

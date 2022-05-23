@@ -32,7 +32,7 @@ namespace PageOblectSolution1
         [TearDown]
         public void TearDown()
         {
-            //_pageProvider.Quit();
+            //_pageProvider.Close();
         }
     }
 }

@@ -26,12 +26,12 @@ namespace PageOblectSolution1.Tests
             textBoxPage.NavigateToTextBox();
             textBoxPage.EnterInvalidEmail();
             textBoxPage.InvalidEmailValidation();
-            //Assert.That(_pageProvider.Equals(textBoxPage.InvalidEmailValidation), Is.EqualTo(true));
+            Assert.That(_pageProvider.Equals(textBoxPage.InvalidEmailValidation), Is.EqualTo(false));
         }
         [TearDown]
         public void Teardown()
         {
-            //_pageProvider.Quit();
+            //_pageProvider.Close();
         }
     }
 }
